@@ -3,7 +3,7 @@ import {HttpTestingController} from '@angular/common/http/testing';
 import {BaseRequestOptions, Response, ResponseOptions, Http, RequestMethod, ConnectionBackend, RequestOptions} from '@angular/http';
 import {MockBackend, MockConnection} from '@angular/http/testing';
 import { MockNews} from '../mock_data/mock-news';
-import { TechNewsService } from './tech-News.service';
+import { TechNewsService } from './tech-news.service';
 
 describe('TechNewsService', () => {
   beforeEach(() => {
@@ -22,7 +22,7 @@ describe('TechNewsService', () => {
 it('should create service', inject([TechNewsService], (service: TechNewsService) => {
   expect(service).toBeTruthy();
 }));
-it('should return message', inject([TechNewsService, MockBackend], (service: TechNewsService, backend: MockBackend) => {
+it('should return tech news', inject([TechNewsService, MockBackend], (service: TechNewsService, backend: MockBackend) => {
   const response = new ResponseOptions({
     body: JSON.stringify(MockNews)
   });

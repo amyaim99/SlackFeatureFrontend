@@ -22,7 +22,7 @@ describe('JokeService', () => {
 it('should create service', inject([JokeService], (service: JokeService) => {
   expect(service).toBeTruthy();
 }));
-it('should return message', inject([JokeService, MockBackend], (service: JokeService, backend: MockBackend) => {
+it('should return joke', inject([JokeService, MockBackend], (service: JokeService, backend: MockBackend) => {
   const response = new ResponseOptions({
     body: JSON.stringify(MockJoke)
   });
