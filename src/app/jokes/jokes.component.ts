@@ -10,11 +10,11 @@ import { JokeService } from '../services/joke.service';
 export class JokesComponent implements OnInit {
 
   joke: Joke;
-  constructor(private jokeService: JokeService) { }
+  constructor(private jokeService: JokeService) { }g
 
-  getJoke(){
+  getJoke() {
     this.jokeService.getJoke()
-    .subscribe(res =>{
+    .subscribe(res => {
       console.log(res);
       this.joke = res;
       document.getElementById('con2').style.display = 'block';
