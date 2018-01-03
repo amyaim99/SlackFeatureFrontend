@@ -1,0 +1,13 @@
+<div class="w3-container w3-red">
+  <button class="button" (click) = "getTechNews()">Tech News</button>
+  <button class ="button" id="but1" (click)="clearBox()">Close</button>
+  <div id = "con3" *ngIf="teckNews">
+    <p> Title: {{teckNews.title}}</p>
+    <p> Author: {{teckNews.author}}</p>
+    <p> Desciption: {{teckNews.description}} </p>
+    <p> Date: {{teckNews.date}}</p>
+    <a href="{{teckNews.source}}" onclick="location.href=this.href;">Link</a>
+    <!-- <a href="{{teckNews.source}}"></a>   -->
+    
+  </div>
+  </div>

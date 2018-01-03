@@ -1,0 +1,11 @@
+<div class="w3-container w3-blue">
+  <button class= "button" (click) = "getJoke()"> Joke</button>
+  <button class ="button" id="but1" (click)="clearBox()">Close</button>
+  
+  <div id="con2" *ngIf="joke">
+    <p>Joke of the day. </p>
+    <p> Type: {{joke.type}}</p>
+    <p> Setup: {{joke.setup}} </p>
+    <p> punchline: {{joke.punchline}}</p>
+  </div>
+  </div>

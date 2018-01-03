@@ -1,0 +1,20 @@
+
+.mytext{
+    color:blue;
+    font-size: 28;
+   font-weight: bold;
+    border:0;padding:10px;background:rgb(197, 250, 7);
+    width: 143%;
+    float: left;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    width: 770px;
+    border: 1px solid rgb(5, 26, 9);
+    overflow: hidden; 
+}
+.text{
+    display:flex;
+    flex-direction:column;
+}

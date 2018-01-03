@@ -1,27 +1,33 @@
 <div class="container" >
-        <div id="wrapper">
-        <div class="col-2 col-md-auto" id="onlineUsers">
-          <div class="card" style="width: 20rem;height:30rem;">
-            <div class="alert alert-success" role="alert">
-              <h4 class="alert-heading">Online Users</h4>
-              <ul></ul>
-            </div>
-          </div>
+    <div id="wrapper">
+    <div class="col-2 col-md-auto" id="onlineUsers">
+      <div class="card" style="width: 20rem;height:40rem;">
+        <div class="alert alert-success" role="alert">
+          <h4 class="alert-heading">Services</h4>
+          <app-display-tech-news></app-display-tech-news>
+          <p></p>
+          <p></p>
+          <app-display-quote></app-display-quote>
+          <p></p>
+          <p></p>
+          <app-jokes></app-jokes>
+          <ul></ul>
         </div>
-        <div class="col-sm-6 col-sm-offset-4 frame card" id="chatboxHistory" style="height:30rem">
-          <ul> <li *ngFor= 'let message of messages' >{{message}} </li></ul>
-          <div>
-              <div class="msj-rta macro" style="margin:auto">                        
-                 <div class="text text-r" style="background:whitesmoke !important">
-                      <app-message></app-message>
-                      checking
-                  </div>
-              </div>
-          </div>
-      </div>  
-      </div> 
       </div>
+    </div>
+    <div class="col-sm-8 col-sm-offset-4 frame card" id="chatboxHistory" style="width:100rem;height:39rem;">
+      <ul></ul>
+      <div>
+          <div class="msj-rta macro" style="margin:auto">
+             <div class="text text-r" style="background:whitesmoke !important">
+                <app-display></app-display>
+               <!-- <app-message-http></app-message-http> -->
+              </div>
 
-
-
+          </div>
+      </div>
+  </div>
+  </div>
+  <app-message></app-message>
+  </div>
 
