@@ -14,6 +14,10 @@ import { DisplayTechNewsComponent } from './display-tech-news/display-tech-news.
 import { TechNewsService } from './services/tech-news.service';
 import { JokesComponent } from './jokes/jokes.component';
 import { JokeService } from './services/joke.service';
+import { TechWebNewsComponent } from './tech-web-news/tech-web-news.component';
+import { WebTechNewsServiceService } from './services/web-tech-news-service.service';
+import { TechRadarNewsComponent } from './tech-radar-news/tech-radar-news.component';
+import { TechRadarNewsService } from './services/tech-radar-news.service';
 
 
 
@@ -25,13 +29,15 @@ import { JokeService } from './services/joke.service';
     DisplayQuoteComponent,
     DisplayTechNewsComponent,
     JokesComponent,
+    TechWebNewsComponent,
+    TechRadarNewsComponent,
    
   ],
   imports: [
     NgbModule.forRoot(), BrowserModule, FormsModule, CommonModule, HttpModule
   ],
   providers: [MessageDataService, 
-    QuoteServiceService, TechNewsService, JokeService],
+    QuoteServiceService, TechNewsService, JokeService, WebTechNewsServiceService, TechRadarNewsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

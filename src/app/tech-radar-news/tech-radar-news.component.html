@@ -1,0 +1,12 @@
+<div class="w3-container w3-red">
+  <button class="button2" (click) = "getTechRadarNews()">The Next Web News</button>
+    <button class ="button" id="but1" (click)="clearBox()">Close</button>
+     <div id = "con5" *ngIf="radarNews">
+      <p> Title: {{radarNews.title}}</p>
+      <p> Author: {{radarNews.author}}</p>
+      <p> Desciption: {{radarNews.description}} </p>
+      <p> Date: {{radarNews.date}}</p>
+      <a href="{{radarNews.source}}" onclick="location.href=this.href;">Link</a>
+     
+    </div>
+    </div>

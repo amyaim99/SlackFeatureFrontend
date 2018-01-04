@@ -9,6 +9,10 @@ import {HttpModule} from '@angular/http';
 import { DisplayQuoteComponent } from './display-quote/display-quote.component';
 import { DisplayTechNewsComponent } from './display-tech-news/display-tech-news.component';
 import { JokesComponent } from './jokes/jokes.component';
+import { TechRadarNewsComponent } from './tech-radar-news/tech-radar-news.component';
+import { TechWebNewsComponent } from './tech-web-news/tech-web-news.component';
+import { WebTechNewsServiceService } from './services/web-tech-news-service.service';
+import { TechRadarNewsService } from './services/tech-radar-news.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -24,8 +28,10 @@ describe('AppComponent', () => {
         DisplayQuoteComponent,
         DisplayTechNewsComponent,
         JokesComponent,
+        TechRadarNewsComponent,
+        TechWebNewsComponent
       ],
-      providers: [MessageDataService],
+      providers: [MessageDataService, WebTechNewsServiceService, TechRadarNewsService],
     }).compileComponents();
   }));
   it('should create the app', async(() => {
