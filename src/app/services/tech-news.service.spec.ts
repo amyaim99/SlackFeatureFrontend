@@ -22,7 +22,7 @@ describe('TechNewsService', () => {
 it('should create service', inject([TechNewsService], (service: TechNewsService) => {
   expect(service).toBeTruthy();
 }));
-it('should return tech news', inject([TechNewsService, MockBackend], (service: TechNewsService, backend: MockBackend) => {
+it('should return techCrunch news', inject([TechNewsService, MockBackend], (service: TechNewsService, backend: MockBackend) => {
   const response = new ResponseOptions({
     body: JSON.stringify(MockNews)
   });

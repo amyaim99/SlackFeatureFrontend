@@ -16,10 +16,27 @@ describe('TechRadarNewsService', () => {
         Http,
         TechRadarNewsService,
       ]
+
     });
+    const service = TestBed.get(TechRadarNewsService);
+    const  backend = TestBed.get(ConnectionBackend);
+});
 
 
   it('should be created', inject([TechRadarNewsService], (service: TechRadarNewsService) => {
     expect(service).toBeTruthy();
   }));
+  it('should return techRadar news', inject([TechRadarNewsService, MockBackend], (service: TechRadarNewsService, backend: MockBackend) => {
+    const response = new ResponseOptions({
+      body: JSON.stringify(MockNews)
+    });
+    const baseResponse = new Response(response);
+    backend.connections.subscribe(
+      (c: MockConnection) => c.mockRespond(baseResponse)
+    );
+    return service.getTechRadarNews().subscribe( data => {
+      expect(data).toEqual(MockNews);
+    });
+  }));
 });
+
